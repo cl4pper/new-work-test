@@ -1,0 +1,19 @@
+{
+  "testRegex": "((\\.|/*.)(test))\\.js?$",
+  "testEnvironment": "jsdom",
+  "collectCoverageFrom": [
+	"src/components/**/*.{js,jsx}",
+	"!src/components/**/*.story.jsx",
+	"!src/components/index.js"
+  ],
+  "moduleNameMapper": {
+    "^.+\\.(css|less|scss)$": "identity-obj-proxy",
+    "@components": "<rootDir>/src/components",
+    "@containers": "<rootDir>/src/containers",
+    "@pages": "<rootDir>/src/pages",
+    "@store": "<rootDir>/src/store",
+    "@icons": "<rootDir>/src/assets/icons",
+    "@context": "<rootDir>/src/context",
+    "@utils": "<rootDir>/src/utils"
+  }
+}
