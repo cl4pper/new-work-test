@@ -11,7 +11,7 @@ module.exports = {
 		extensions: ['.js', '.jsx'],
 		alias: {
 			'@components': path.resolve(__dirname, 'src/components'),
-		}
+		},
 	},
 	devServer: {
 		static: path.resolve(__dirname, 'build'),
