@@ -1,0 +1,17 @@
+$font-family: 'Courier New', Courier, monospace;
+.Text {
+	font-family: $font-family;
+	font-size: 16px;
+
+	&--small {
+		font-size: 12px;
+	}
+
+	&--bold {
+		font-weight: bold;
+	}
+
+	&--italic {
+		font-style: italic;
+	}
+}
