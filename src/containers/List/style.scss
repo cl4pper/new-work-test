@@ -1,0 +1,21 @@
+.List {
+	width: 100%;
+	height: 100vh;
+
+	&--empty {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		padding-bottom: 64px;
+	}
+
+	&__item {
+		margin-bottom: 16px;
+	}
+}
