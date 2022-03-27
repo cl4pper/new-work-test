@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { useArticles } from '@context';
-import { Card, Text } from '@components';
+import { Card, Loader } from '@components';
 
 // STYLE
 import './style.scss';
@@ -12,7 +12,7 @@ const List = () => {
 	return (
 		<div className={classnames('List', { 'List--empty': loading && !articles.length })}>
 			{loading ? (
-				<Text id="list-loading" content="Loading..." italic />
+				<Loader id="list" />
 			) : (
 				<ul className="List__list">
 					{articles.map((article, index) => (
