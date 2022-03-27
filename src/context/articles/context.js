@@ -5,6 +5,7 @@ export const ArticlesContext = createContext(null);
 
 export function ArticlesProvider({ children }) {
 	const [articles, setArticles] = useState([]);
+	const [article, selectArticle] = useState(null);
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
@@ -24,6 +25,8 @@ export function ArticlesProvider({ children }) {
 	const context = {
 		articles,
 		loading,
+		article,
+		selectArticle,
 	};
 
 	return <ArticlesContext.Provider value={context}>{children}</ArticlesContext.Provider>;

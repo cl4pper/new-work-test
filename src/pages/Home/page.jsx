@@ -1,17 +1,16 @@
 import React from 'react';
-import { List } from '@containers';
-import { Article } from '@components';
+import { List, Article } from '@containers';
 
 // STYLE
 import './style.scss';
 
 const Home = () => {
-    return (
-        <div className="Home">
-            <List />
-            <Article />
-        </div>
-    );
+	return (
+		<div className="Home">
+			<List />
+			<Article id="home-page" />
+		</div>
+	);
 };
 
 export default Home;

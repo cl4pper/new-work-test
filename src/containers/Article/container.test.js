@@ -3,7 +3,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import Article from './component';
+import Article from './container';
 
 const fullArticle = {
 	title: 'Title here',
