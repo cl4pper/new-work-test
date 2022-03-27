@@ -49,7 +49,9 @@ describe('Article', () => {
 		expect(getByTestId('jest-article-date').textContent).toBe(date);
 		expect(getByTestId('jest-article-title').textContent).toBe('Title here');
 		expect(getByTestId('jest-article-link')).toBeTruthy();
-		expect(getByTestId('jest-article-content').textContent).toBe('Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+		expect(getByTestId('jest-article-content').textContent).toBe(
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+		);
 	});
 
 	it('should render image', () => {
@@ -59,9 +61,7 @@ describe('Article', () => {
 		const bg = elem.style.background;
 
 		expect(getByTestId('jest-article-image')).toBeTruthy();
-		expect(bg).toBe(
-			'url(https://i.ytimg.com/vi/KGRl_-wWMD0/hqdefault_live.jpg)'
-		);
+		expect(bg).toBe('url(https://i.ytimg.com/vi/KGRl_-wWMD0/hqdefault_live.jpg)');
 	});
 
 	it('should handle empty article', () => {

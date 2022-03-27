@@ -14,11 +14,13 @@ const Article = (props) => {
 	const date = article && article.publishedAt ? article.publishedAt : 'No date';
 	const image = article && article.image ? article.image : '';
 
-    function renderLink() {
-        return url
-        ? (<a href={url} target="_blank" className="Article__link"><Text id={`${id}-article-link`} content="Full article link" italic small /></a>)
-        : null
-    }
+	function renderLink() {
+		return url ? (
+			<a href={url} target="_blank" className="Article__link">
+				<Text id={`${id}-article-link`} content="Full article link" italic small />
+			</a>
+		) : null;
+	}
 
 	return (
 		<section className="Article" data-testid={id}>
@@ -35,7 +37,7 @@ const Article = (props) => {
 			</div>
 			<div data-testid={`${id}-article-bottom`} className="Article__content">
 				<Title id={`${id}-article-title`} content={title} bold />
-                { renderLink() }
+				{renderLink()}
 				<Text id={`${id}-article-content`} content={content} />
 			</div>
 		</section>
