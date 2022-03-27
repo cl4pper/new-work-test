@@ -1,11 +1,11 @@
 .Chip {
 	padding: 2px 4px;
 	border-radius: 10px;
-	background: rgba(179, 179, 179, 0.2);
-	color: rgba(49, 49, 49, 0.2);
+	background: rgba(179, 179, 179, 0.1);
+	color: rgba(49, 49, 49, 0.1);
 
 	&--active {
-		background: rgb(179, 179, 179);
-		color: rgb(49, 49, 49);
+		color: rgb(255, 255, 255);
+		background: rgb(49, 49, 49);
 	}
 }

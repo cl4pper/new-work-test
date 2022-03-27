@@ -7,17 +7,17 @@ import Card from './component';
 const info = {
 	title: 'Title here',
 	description: 'Content to be rendered.',
-	image: '',
+	urlToImage: '',
 };
 const fullInfo = {
 	title: 'Title here',
 	description: 'Content to be rendered.',
-	image: 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-27.jpg',
+	urlToImage: 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-27.jpg',
 };
 const emptyInfo = {
 	title: null,
 	description: null,
-	image: null,
+	urlToImage: null,
 };
 
 let wrapper = (props) => <Card {...props} />;

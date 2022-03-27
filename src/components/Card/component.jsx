@@ -11,7 +11,7 @@ const Card = (props) => {
 
 	const title = info && info.title ? info.title : 'No title';
 	const description = info && info.description ? info.description : 'No description';
-	const image = info && info.image ? info.image : '';
+	const image = info && info.urlToImage ? info.urlToImage : '';
 
 	return (
 		<div
