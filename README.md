@@ -18,6 +18,7 @@ A frontend project engineered by [react-bolierplate](https://github.com/cl4pper/
 - Axios
 - Webpack
 - SASS
+- dotenv-webpack
 
 ### Support techs:
 - React testing library
