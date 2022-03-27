@@ -1,0 +1,50 @@
+$border-radius: 4px;
+.Article {
+	width: 100%;
+	height: 100vh;
+
+	&__image {
+		height: 400px;
+		background-position: center !important;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		margin-bottom: 24px;
+	}
+
+	&__details {
+		display: flex;
+		padding: 8px;
+
+		> p {
+			background: #ffffff;
+			padding: 2px 4px;
+			margin-right: 8px;
+			border-radius: $border-radius;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__content {
+		padding: 0 16px;
+		> p:last-child {
+			padding-bottom: 64px;
+			margin-top: 24px;
+			text-align: justify;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: rgb(66 103 178); // #4267B2
+		cursor: pointer;
+
+		> p {
+			display: inline-block;
+		}
+	}
+}
