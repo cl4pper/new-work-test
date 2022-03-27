@@ -12,8 +12,12 @@
 		padding: 8px;
 		margin: 0;
 		list-style: none;
-		padding-bottom: 64px;
+		padding-bottom: 48px;
 		overflow-y: auto;
+
+		@media (max-width: 800px) {
+			height: 320px;
+		}
 	}
 
 	&__item {

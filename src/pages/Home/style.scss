@@ -1,4 +1,9 @@
 .Home {
 	display: grid;
 	grid-template-columns: 400px auto;
+
+	@media (max-width: 800px) {
+		display: flex;
+		flex-direction: column-reverse;
+	}
 }

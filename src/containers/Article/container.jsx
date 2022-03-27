@@ -10,9 +10,22 @@ const Article = (props) => {
 	const { id } = props;
 	const { article } = useArticles();
 
-	function setDate (arg) {
+	function setDate(arg) {
 		const date = new Date(arg);
-		const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',  'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+		const months = [
+			'Jan',
+			'Feb',
+			'Mar',
+			'Apr',
+			'May',
+			'Jun',
+			'Jul',
+			'Aug',
+			'Sep',
+			'Oct',
+			'Nov',
+			'Dec',
+		];
 		const day = date.getDate();
 		const month = months[date.getMonth()];
 		const year = date.getFullYear();
@@ -38,16 +51,17 @@ const Article = (props) => {
 	function render() {
 		return article ? (
 			<>
-				{' '}
-				<div
-					id={`${id}-article-image`}
-					data-testid={`${id}-article-image`}
-					className="Article__image"
-					style={{ background: `${image ? `url(${image})` : 'rgb(179, 179, 179)'}` }}
-				>
-					<div data-testid={`${id}-article-details`} className="Article__details">
-						<Text id={`${id}-article-author`} content={author} bold />
-						<Text id={`${id}-article-date`} content={date} bold />
+				<div className="Article__imageWrapper">
+					<div
+						id={`${id}-article-image`}
+						data-testid={`${id}-article-image`}
+						className="Article__image"
+						style={{ background: `${image ? `url(${image})` : 'rgb(179, 179, 179)'}` }}
+					>
+						<div data-testid={`${id}-article-details`} className="Article__details">
+							<Text id={`${id}-article-author`} content={author} bold />
+							<Text id={`${id}-article-date`} content={date} bold />
+						</div>
 					</div>
 				</div>
 				<div data-testid={`${id}-article-bottom`} className="Article__content">
