@@ -11,7 +11,7 @@ export function ArticlesProvider({ children }) {
 	useEffect(() => {
 		setLoading(true);
 		axios
-			.get('http://0.0.0.0:8000/v1/news')
+			.get(process.env.BASE_URL)
 			.then((res) => {
 				setArticles(res.data.articles);
 				setLoading(false);
