@@ -9,18 +9,18 @@
 
 	&__list {
 		height: 100vh;
-		padding: 8px;
+		padding: spacing('sm');
 		margin: 0;
-		list-style: none;;
+		list-style: none;
 		overflow-y: auto;
 
-		@media (max-width: 800px) {
+		@media (max-width: $responsive-mobile) {
 			height: 320px;
 		}
 	}
 
 	&__item {
-		margin-bottom: 16px;
+		margin-bottom: spacing('md');
 		z-index: 1;
 	}
 }

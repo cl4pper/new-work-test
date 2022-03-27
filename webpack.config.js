@@ -14,6 +14,7 @@ module.exports = {
 			'@containers': path.resolve(__dirname, 'src/containers'),
 			'@pages': path.resolve(__dirname, 'src/pages'),
 			'@context': path.resolve(__dirname, 'src/context'),
+			'@styles': path.resolve(__dirname, 'src/styles'),
 		},
 	},
 	devServer: {
@@ -29,7 +30,11 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }],
+				use: [
+					{ loader: 'style-loader' },
+					{ loader: 'css-loader' },
+					{ loader: 'sass-loader', options: { additionalData: '@import "~@styles/global.scss";' } },
+				],
 			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,

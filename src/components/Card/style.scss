@@ -1,14 +1,11 @@
-$border-radius: 4px;
-$image-sizes: 100px;
-
 .Card {
 	width: 100%;
 	display: grid;
 	grid-template-columns: $image-sizes auto;
 	grid-template-rows: $image-sizes;
-	column-gap: 8px;
+	column-gap: spacing('sm');
 	border-radius: $border-radius;
-	background: rgb(255, 255, 255);
+	background: $color-light;
 	cursor: pointer;
 
 	&--read {
@@ -17,7 +14,7 @@ $image-sizes: 100px;
 
 	&:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 16px 10px rgba(240, 240, 240, 0.9);
+		box-shadow: 0 16px 10px $color-shadow;
 	}
 
 	&__tooltip {
@@ -26,10 +23,10 @@ $image-sizes: 100px;
 
 		> .tooltiptext {
 			visibility: hidden;
-			background: rgb(112, 112, 112); // #707070
-			color: rgb(255, 255, 255);
-			border-radius: 4px;
-			padding: 8px;
+			background: $color-grey-1;
+			color: $color-light;
+			border-radius: $border-radius;
+			padding: spacing('sm');
 			position: absolute;
 			z-index: 2;
 		}
@@ -47,8 +44,8 @@ $image-sizes: 100px;
 	}
 
 	&__info {
-		padding: 8px 0;
-		padding-right: 8px;
+		padding: spacing('sm') 0;
+		padding-right: spacing('sm');
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

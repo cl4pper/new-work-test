@@ -1,0 +1,15 @@
+// MAIN COLORS
+$color-blue-light: rgb(97, 218, 251); // #61dafb
+$color-blue-dark: rgb(66 103 178); // #4267B2
+
+// BASE COLORS
+$color-dark: rgb(49, 49, 49); // #313131
+$color-light: rgb(255, 255, 255); // #FFFFFF
+$color-grey-1: rgb(112, 112, 112); // #707070
+$color-grey-2: rgb(179, 179, 179); // #B3B3B3
+$color-grey-3: rgb(240, 240, 240); // #EBEBEB
+$color-grey-4: rgb(251, 251, 251); // #FBFBFB
+
+// COMPONENTS
+$color-shadow: rgba($color-grey-3, 0.9);
+$color-gradient: linear-gradient(90deg, $color-blue-dark, $color-blue-light);
