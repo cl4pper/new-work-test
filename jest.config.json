@@ -8,6 +8,8 @@
   ],
   "moduleNameMapper": {
     "^.+\\.(css|less|scss)$": "identity-obj-proxy",
-    "@components": "<rootDir>/src/components"
+    "@components": "<rootDir>/src/components",
+    "@containers": "<rootDir>/src/containers",
+    "@context": "<rootDir>/src/context"
   }
 }
