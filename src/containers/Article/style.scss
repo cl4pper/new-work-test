@@ -54,8 +54,8 @@ $image-height: 400px;
 
 	&__content {
 		padding: 0 16px;
+		padding-bottom: 16px;
 		> p:last-child {
-			padding-bottom: 64px;
 			margin-top: 24px;
 			text-align: justify;
 		}
