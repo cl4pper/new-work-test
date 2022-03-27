@@ -7,7 +7,6 @@
     "lint": "prettier --write '**/*.js' '**/*.jsx' '**/*.test.js' '**/*.scss' '**/*.html'",
     "test:all": "jest --coverage --verbose=true --config ./jest.config.json",
     "test:watch": "jest --watchAll --coverage --verbose=true --config ./jest.config.json",
-    "test:components": "jest --coverage --verbose=true ./src/components --config ./jest.config.json",
     "build": "webpack --config webpack.config.js --mode production"
   },
   "dependencies": {

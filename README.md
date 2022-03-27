@@ -1,12 +1,24 @@
-# react-setup
+# new-work-test
 
-A frontend project boilerplate using [React](https://reactjs.org) :smiley:
-
-
-Code linting and testing setups ___ready to go___.
-
+A frontend project engineered by [react-bolierplate](https://github.com/cl4pper/react-setup) :smiley:
 
 ## Instructions:
 - **fork**/**clone** this repo
-- **yarn lint** (apply code styling)
-- **yarn test:all / yarn test:watch** (runs tests once / keeps tests running)
+- **yarn run:dev** (to run project locally)
+- **yarn lint** (to apply code styling)
+- **yarn test:all / yarn test:watch** (to run tests once / to keep tests running)
+
+### Main techs used:
+- React
+- Jest
+
+### Support techs:
+- Context API
+- Axios
+- Webpack
+- SASS
+
+### Support techs:
+- React testing library
+- Classnames
+- Prettier
