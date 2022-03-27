@@ -10,17 +10,27 @@ const Article = (props) => {
 	const { id } = props;
 	const { article } = useArticles();
 
+	function setDate (arg) {
+		const date = new Date(arg);
+		const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul',  'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+		const day = date.getDate();
+		const month = months[date.getMonth()];
+		const year = date.getFullYear();
+
+		return `${month} ${day}, ${year}`;
+	}
+
 	const title = article && article.title ? article.title : 'No title';
 	const content = article && article.content ? article.content : 'No content';
 	const author = article && article.author ? article.author : 'No author';
 	const url = article && article.url ? article.url : '';
-	const date = article && article.publishedAt ? article.publishedAt : 'No date';
+	const date = article && article.publishedAt ? setDate(article.publishedAt) : 'No date';
 	const image = article && article.urlToImage ? article.urlToImage : '';
 
 	function renderLink() {
 		return url ? (
 			<a href={url} target="_blank" className="Article__link">
-				<Text id={`${id}-article-link`} content="Full article link" italic small />
+				<Text id={`${id}-article-link`} content="Full article link" italic />
 			</a>
 		) : null;
 	}

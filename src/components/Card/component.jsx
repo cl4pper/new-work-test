@@ -13,6 +13,11 @@ const Card = (props) => {
 	const description = info && info.description ? info.description : 'No description';
 	const image = info && info.urlToImage ? info.urlToImage : '';
 
+	function handleString(str, limit) {
+		if (str.length > limit) return `${str.slice(0, `${limit - 3}`)}...`;
+		return str;
+	}
+
 	return (
 		<div
 			id={id}
@@ -29,9 +34,12 @@ const Card = (props) => {
 				}}
 			/>
 			<div data-testid={`${id}-card-content`} className="Card__info">
-				<Text id={`${id}-card-title`} content={title} bold />
+				<div className="Card__tooltip">
+					<Text id={`${id}-card-title`} content={handleString(title, 30)} bold />
+					<span className="tooltiptext">{title}</span>
+				</div>
 				<div data-testid={`${id}-card-bottom`} className="Card__description">
-					<Text id={`${id}-card-description`} content={description} small />
+					<Text id={`${id}-card-description`} content={handleString(description, 60)} small />
 					<span className="Card__chip">
 						<Chip id={`${id}-card-chip`} label="Read" active={read} />
 					</span>

@@ -9,7 +9,7 @@
 
 	&__list {
 		height: 100vh;
-		padding: 0;
+		padding: 8px;
 		margin: 0;
 		list-style: none;
 		padding-bottom: 64px;
@@ -18,5 +18,6 @@
 
 	&__item {
 		margin-bottom: 16px;
+		z-index: 1;
 	}
 }
