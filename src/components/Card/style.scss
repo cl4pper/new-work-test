@@ -1,0 +1,45 @@
+$border-radius: 4px;
+$image-sizes: 80px;
+
+.Card {
+	width: 100%;
+	display: grid;
+	grid-template-columns: $image-sizes auto;
+	grid-template-rows: $image-sizes;
+	column-gap: 8px;
+	border-radius: $border-radius;
+	background: rgb(255, 255, 255);
+	cursor: pointer;
+
+	&--read {
+		opacity: 0.5;
+	}
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 8px rgba(240, 240, 240, 0.5);
+	}
+
+	&__image {
+		background-size: cover !important;
+		background-position: center !important;
+	}
+
+	&__info {
+		padding: 8px 0;
+		padding-right: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__description {
+		display: grid;
+		grid-template-rows: auto auto;
+	}
+
+	&__chip {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
