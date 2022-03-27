@@ -1,13 +1,17 @@
 import React from 'react';
-
+import { ArticlesProvider } from '@context';
 // STYLE
 import './App.scss';
 
+import { Home } from '@pages';
+
 const App = () => {
 	return (
-		<div className="App">
-			<h1 className="App__title">react-setup</h1>
-		</div>
+		<ArticlesProvider>
+			<div className="App">
+				<Home />
+			</div>
+		</ArticlesProvider>
 	);
 };
 
